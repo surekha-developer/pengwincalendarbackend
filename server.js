@@ -47,7 +47,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-    'https://pengwintechcalendar.netlify.app/', // replace with your frontend URL
+    'https://pengwintechcalendar.netlify.app', // replace with your frontend URL
     'http://localhost:3000',              // for local dev
   ],
   credentials: true, // allow cookies if your auth uses them
