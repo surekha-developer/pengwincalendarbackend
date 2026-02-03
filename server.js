@@ -41,8 +41,16 @@ dotenv.config();
 const app = express();
 
 /* ---------- MIDDLEWARE ---------- */
+// app.use(cors({
+//   origin: '*', // change to Netlify URL later if needed
+// }));
+
 app.use(cors({
-  origin: '*', // change to Netlify URL later if needed
+  origin: [
+    'https://pengwintechcalendar.netlify.app/', // replace with your frontend URL
+    'http://localhost:3000',              // for local dev
+  ],
+  credentials: true, // allow cookies if your auth uses them
 }));
 app.use(express.json());
 
